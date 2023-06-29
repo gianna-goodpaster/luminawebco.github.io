@@ -1,0 +1,1464 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  text-decoration: none;
+  list-style: none;
+  color: #434342;
+}
+
+
+main{
+  margin-bottom: 100vh;
+  background: linear-gradient(#FCF7F4, #B2AF9B);
+  overflow: hidden;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  line-height: 160%;
+}
+h1, h2, h3, h4, h5{
+  font-weight: 500;
+}
+h1, h2 {
+  font-family: Playfair Display, serif;
+}
+
+h1 {
+  letter-spacing: 0.25em;
+  font-size: 2em;
+}
+
+h2 {
+  letter-spacing: 0.1em;
+  font-size: 2em;
+}
+
+
+h4 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.15em;
+  color: #D6AF7C;
+}
+h5, h3{
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  position: relative;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/*<----------------NAV BAR STYLING---------------->*/
+nav {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color:#FCF7F4;
+}
+
+body.active {
+  position: fixed;
+}
+
+.nav-list {
+  visibility: hidden;
+}
+
+.nav-list.active {
+  visibility: visible;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 65px);
+    top: 65px;
+  background-color: #B2A799;
+  transition: background-color 100ms linear;
+  float: right;
+  text-align: center;
+  z-index: 100;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-list li {
+  opacity: 1;
+  margin: 30px 0;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+.nav-list li a {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.25rem;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #464C52;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  margin-right: 5vw;
+  margin-top: 5vw;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/*<----------------INTROSTYLING---------------->*/
+.intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: calc(100vh - 80px);
+  /* height: calc(var(--vh, 1vh) * 100); */
+  max-height: 100%
+}
+
+.company-name {
+  z-index: 2;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: relative;
+  justify-self: center;
+  text-align: center;
+  top: 10vw;
+}
+
+.hero {
+  /* height: calc(var(--vh, 1vh) * 90); */
+  height: inherit;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
+  background: no-repeat top center/100% url(Images/LuminaMobile.webp);
+  align-self: start;
+
+}
+
+.hero img {
+  width: 100vw;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: -1;
+}
+.mobilePreview img{
+  display: none;
+}
+
+
+/*<----------------WHAT WE OFFER STYLING---------------->*/
+.features {
+  display: grid;
+  padding: 15vw 10vw 5vw 10vw;
+  grid-row-gap: 10vw;
+}
+
+.responsiveness{
+  background-color: #FBF5F2;
+}
+.maintenance{
+  background-color: #ECE7E0;
+}
+.project1-desktop, .project3-desktop {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-self: end;
+}
+
+.project1-desktop, .project2-desktop, .project3-desktop {
+  width: 60vw;
+  height: 80vw;
+  z-index: 1;
+
+}
+
+.project1-mobile, .project2-mobile, .project3-mobile {
+  width: 35vw;
+  height: 50vw;
+  z-index: 2;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.project1-mobile, .project3-mobile {
+  grid-column: 1/3;
+  grid-row: 3/5;
+  align-self: end;
+  justify-self: start;
+}
+
+.project1-desktop {
+  background: no-repeat center/100% url("Images/Project1-Desktop.webp");
+  background-size: contain;
+  
+}
+
+.project1-mobile {
+  background: no-repeat center/100% url("Images/Project1-Mobile.webp");
+  background-size: contain;
+}
+
+.project2-desktop {
+  background: no-repeat center/100% url("Images/Project2-Desktop.webp");
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-size: contain;
+}
+
+.project2-mobile {
+  background: no-repeat center/100% url("Images/Project2-Mobile.webp");
+  grid-column: 1/3;
+  grid-row: 3/5;
+  align-self: end;
+  justify-self: end;
+  background-size: contain;
+}
+
+.project3-desktop {
+  background: no-repeat center/100% url("Images/Project3-Desktop.webp");
+  background-size: contain;
+}
+
+.project3-mobile {
+  background: no-repeat center/100% url("Images/Project3-Mobile.webp");
+  background-size: contain;
+}
+
+.features h2, .features p {
+  grid-column: 1/3;
+  z-index: 5;
+}
+
+/*<----------------ABOUT US STYLING---------------->*/
+.aboutus {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 15vw 10vw;
+  grid-row-gap: 5vw;
+}
+
+/* .aboutusimg {
+  background: no-repeat center/100% url("Images/About.png");
+  width: 80vw;
+    height: 100vw;
+    justify-self: center;
+    background-size: contain;
+} */
+.aboutusimg {
+  background: no-repeat center/100% url("Images/redwood.webp");
+  width: 80vw;
+    height: 100vw;
+    justify-self: center;
+    background-size: contain;
+}
+.fourth{
+  padding-bottom: 10vw;
+}
+.aboutus p{
+  padding-bottom: 10vw;
+}
+button {
+  
+  border-radius: 30px;
+  padding: 10px 20px; 
+  width: 40vw;
+  font-size: .75em;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  
+  border: solid 2px #3E3E3E;
+  background-color: #3E3E3E;
+}
+.aboutusbtn{
+  justify-self: start;
+}
+button:hover {
+  background-color: #B2AF9B;
+  border: solid 2px #F3EDE0;
+}
+button a{
+  color: #F3EDE0;
+}
+
+
+/*<----------------FOOTER STYLING---------------->*/
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:  auto;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-color: #E5DECE;
+  position: fixed;
+  z-index: -10;
+  bottom: 0;
+}
+footer.visible {
+  transform: translateY(0);
+}
+.footer-logo {
+  max-width:30vw;
+  position: relative;
+    top: 10vw;
+}
+.contact-info p{
+  font-size: 1em;
+  font-family: Playfair Display, serif;
+}
+h5{
+  font-size: 1em;
+  padding: 5vh 0vh 2vh 0;
+}
+footer img{
+  justify-self: center;
+align-self: center;
+}
+
+/*<----------------SUBPAGES STYLING---------------->*/
+/* .whatwedo, .aboutme, .contact{
+  padding: 20vw 10vw 0vw 10vw;
+} */
+.services h2, .aboutme h2, .contact h2{
+  padding-bottom: 15vw;
+}
+.services p, .aboutme p, .contact p{
+  padding-bottom: 5vw;
+}
+.whatwedo{
+  height: calc(85vh - 80px);
+  /* height: calc(var(--vh, 1vh) * 100); */
+  max-height: 100%;
+  background: linear-gradient(#FCF7F4, #DCDACA);
+}
+.servicesimg {
+  background: no-repeat center/100% url("Images/services.webp");
+  width: 80vw;
+    height: 35vw;
+    justify-self: end;
+    align-self: end;
+    background-size: contain;
+}
+.designed, .mobilefirst, .servicestable, .contact, .concepts{
+  padding: 20vw 10vw 20vw 10vw;
+}
+/* .designed{
+  background-color: #FBF5F2;
+} */
+.designedimg,.mobilefirstimg, .conceptsimg{
+  padding-top: 10vw;
+}
+.designedimg {
+  background: no-repeat center/100% url("Images/designed.webp");
+  width: 90vw;
+    height: 60vw;
+    justify-self: end;
+    align-self: end;
+    background-size: contain;
+}
+.conceptsimg {
+  background: no-repeat center/100% url("Images/concepts.webp");
+  width: 90vw;
+    height: 60vw;
+    justify-self: end;
+    align-self: end;
+    background-size: contain;
+}
+.concepts{
+  background-color: #ECE7E0;
+}
+.mobilefirst{
+  background-color: #FBF5F2;
+}
+.mobilefirstimg {
+  background: no-repeat center/100% url("Images/mobilefirst.webp");
+  width: 90vw;
+    height: 40vw;
+    justify-self: end;
+    align-self: end;
+    background-size: contain;
+}
+.table{
+background-color: #E9E6D8;
+box-shadow: inset 0 0 3px #676767;
+padding:15vw 10vw;
+text-align: center;
+border-radius: 15px;
+}
+.concept p, .dev p, .design p{
+  font-family: Playfair Display, serif;
+  font-weight: 500;
+}
+.concept, .dev, .design{
+  padding-bottom: 10vw;
+}
+h3{
+  font-weight: 600;
+  font-size: 1.2em;
+  padding-bottom: 10vw;
+}
+.abouthero {
+  background: no-repeat center/100% url("Images/laptop.webp");
+  width: 80vw;
+  height: 75vw;
+    justify-self: center;
+    background-size: contain;
+}
+.whoweareimg {
+  background: no-repeat center/100% url("Images/office.webp");
+  width: 100vw;
+  height: 90vw;
+    justify-self: center;
+    background-size: contain;
+}
+.giannaimg {
+  background: no-repeat center/100% url("Images/gianna.webp");
+  width: 100vw;
+  height: 90vw;
+    justify-self: center;
+    background-size: contain;
+}
+.owner{
+  background-color:transparent;
+}
+.whoweare h2, .owner h2, .whoweare p, .owner p{
+padding-bottom: 10vw;
+}
+.aboutmain{
+  padding: 8vw 10vw 20vw 10vw;
+}
+.info h5{
+  padding:0;
+}
+.info .contact-info{
+  padding-top: 10vw;
+}
+
+
+.submit-button {
+  background-color: #ccc;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-button.clicked {
+  background-color: green;
+}
+
+.error {
+  color: red;
+}
+form{
+  padding: 10vw 0 10vw 0;
+  background-color: #F7F3ED;
+  display: grid;
+  border-radius: 5px;
+}
+input{
+  width:75%;
+  box-shadow: inset 0 0 2px #505050;
+  border:none;
+  border-radius: 15px;
+  height: 10vw;
+  margin-bottom: 7vw;
+  align-self: center;
+  justify-self: center;
+}
+input[type=text], input[type=email]{
+  padding-left: 5vw;
+}
+input[name=message]{
+  height: 30vw;
+}
+button[type=submit]{
+  color:white;
+  margin-left: 8vw;
+}
+
+/*<----------------@Media---------------->*/
+  /*Changes the mobile hero image to a taller one for taller devices*/
+/* @media only screen and (min-height: 760px){
+.hero{
+  background:  no-repeat center/100% url("Images/LuminaMobile.png");
+  height: calc(var(--vh, 1vh) * 100);
+  }
+} */
+/*----------------Vertical IPAD STYLING-------------------*/
+  @media only screen and (min-width: 600px) {
+    .hero{
+      background:  no-repeat top center/100% url("Images/TabletHero.webp");
+      }
+      nav{
+        height:15vw;
+      }
+      .nav-list li {
+        margin: 70px;
+      }
+      .logo, .hamburger{
+        margin-top: 5.5vw;
+      }
+      .nav-list.active{
+        top: 15vw;
+      }
+      .nav-list li a{
+        font-size: 1.5em;
+      }
+      /* .features {
+        padding: 0vw 10vw 0vw 10vw;
+    } */
+    p{
+      font-size: 1.125em;
+    }
+    h1 {
+      letter-spacing: 0.3em;
+      font-size: 2.7em;
+    }
+    h2 {
+      letter-spacing: 0.1em;
+      font-size: 3em;
+    }
+    h4{
+      font-size: 1.2em;
+    }
+    .responsiveness {
+      margin-top: 8vw;
+  }
+    .aboutus {
+      padding: 25vw 10vw;
+    }
+    .aboutusimg {
+      background: no-repeat center/100% url("Images/redwood2.webp");
+      width: 80vw;
+        height: 100vw;
+        justify-self: start;
+        background-size: contain;
+    }
+    .fourth{
+      padding-bottom:5vw;
+    }
+    .aboutus p{
+      padding-bottom:0;
+    }
+    button{
+      width: 20vw;
+      font-size: .8em;
+      padding: 15px 20px;
+    }
+    .dev{
+      justify-self: center;
+    }
+    .design{
+      justify-self: end;
+    }
+    .concept, .dev, .design{
+      grid-row: 1/2;
+    }
+    h3{
+      font-size: 1.4em;
+    }
+    .aboutimg {
+      width: 80vw;
+        height: 100vw;
+        justify-self: start;
+        background-size: contain;
+    }
+    /* .whatwedo, .aboutme, .contact{
+      padding: 10vw 10vw 0vw 10vw;
+    } */
+    .aboutmain {
+      padding: 8vw 10vw 20vw 10vw;
+  }
+  .designed, .mobilefirst, .servicestable, .contact, .concepts {
+    padding: 10vw 10vw;
+}
+input {
+  border-radius: 15px;
+  height: 7vw;
+  margin-bottom: 5vw;
+}
+input[type=text], input[type=email] {
+  padding-left: 5vw;
+  font-size: 1em;
+}
+button[type=submit] {
+  font-size: 1em;
+}
+  }
+  
+  
+  @media only screen and (min-width: 768px) {
+  /* CSS rules here */
+  }
+  
+  @media only screen and (min-width: 1024px) and (orientation:landscape){
+    .hero {
+      width: 92vw;
+      /* height: calc(100vh - 95px); */
+      height: inherit;
+      background: no-repeat top center/100% url(Images/Hero3.webp);
+      justify-self: center;
+      background-size: cover;
+  }
+  .mobilePreview {
+    z-index: 2;
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    width: 30vw;
+    justify-self: center;
+    padding-left: 18vw;
+   }
+
+   .mobilePreview img{
+     display: block;
+     width: 100%;
+     height: auto;
+     position: relative;
+     justify-self: center;
+     max-width: 25vw;
+   }
+        /*Turning Mobile nav into desktop nav*/
+        /* .logo{
+          display:block;
+           justify-self: start;
+          align-self: center;
+          margin:0 0 0 4vw;
+          max-width:5vw;
+        } */
+        .nav-list{
+          visibility: visible;
+          }
+        nav{
+           height:100px;
+          display: grid;
+          grid-template-columns: .5fr 1fr;
+        }
+        .hamburger{
+          display: none;
+        }
+        .nav-list{
+          height: 8vw;
+          display: flex;
+          justify-content: space-around;
+           grid-column: 2/3;
+          width: 50vw;
+          align-self: center;
+          justify-self: end;
+        }
+        .nav-list li{
+          line-height: 0;
+          top: 0;
+          align-self: center;
+          margin: 0;
+          display: flex;
+        }
+        .nav-list li a{
+          color:#404246;
+          font-size: .8em;
+          align-self: center;
+          margin-right:3vw;
+        }
+        .nav-list li a.hover{
+            color:#C29D6C;
+        }
+    /* --------------------- */
+        .company-name {
+          text-align: left;
+          left: 4vw;
+          position: absolute;
+          top:10vw;
+          
+        }
+        h1{
+          font-size: 4.5em;
+          /* background-color: #FAF5F2; */
+          height: 12vw;
+          width: 50vw;
+          position: relative;
+        }
+
+        h4{
+          font-size: 1.7em;
+          padding-top: 3vw;
+          border-radius: 0px 0px 30px 0px;
+          /* background-color: #FAF5F2; */
+          height: 5vw;
+          width: 22vw;
+          position: absolute;
+          top: 8vw;
+        }
+        h2{
+          font-size: 2.7em;
+        }
+        .services h2, .aboutme h2{
+          padding-bottom: 10vw;
+        }
+        .about{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .aboutimg{
+          grid-column: 2/3;
+          grid-row: 1/2;
+          width: 32vw;
+          height: 40vw;
+          justify-self: end;
+          align-self: start;
+        }
+        .abouttxt{
+          align-self: center;
+        }
+       
+        
+  }
+  @media only screen and (min-width: 1024px){
+    /* .intro{
+      height: calc(var(--vh, 1vh) * 80);
+    } */
+        /* .features h2:nth-child(1), .features h2:nth-child(3), .features p:nth-child(1), .features p:nth-child(3) {
+          grid-column: 1/2;
+      }
+      .features h2:nth-child(2), .features p:nth-child(2){
+        grid-column: 2/3;
+      } */
+      h2{
+          font-size: 2.7em;
+        }
+        .features {
+          padding: 0vw 10vw 5vw 10vw;
+      }
+      .features.left{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      .features.right{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      .p1, .p3{
+        grid-row: 2/4;
+        grid-column: 1/2;
+        position: relative;
+        align-self: start;
+        padding-top: 10vw;
+        width: 45%;
+      }
+      .p2{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        width: 45%;
+        align-self: end;
+        position: relative;
+        justify-self: end;
+        top: 40px;
+      }
+      .first{
+        /* left: 4.5vw; */
+      }
+      .first, .third{
+        top: 6vw;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        align-self: center;
+        justify-self: start;
+      }
+      .second{
+        top: -2vw;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: start;
+        justify-self: end;
+        width: 45%;
+      }
+      .project1-desktop, .project2-desktop, .project3-desktop{
+        width: 40vw;
+        position: absolute;
+        grid-row: 1/2;
+        z-index: 1;
+      }
+      .project1-desktop, .project3-desktop, .designedimg, .conceptsimg{
+        grid-row: 1/2;
+        grid-column: 2/3;
+      }
+      .project2-desktop, .mobilefirstimg{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        position: absolute;
+      }
+      .project1-mobile, .project3-mobile{
+        grid-column: 2/3;
+      }
+      .project1-mobile, .project2-mobile, .project3-mobile{
+        width: 20vw;
+        height: 25vw;
+      }
+      .project2-mobile{
+        grid-column: 1/2;
+      }
+      
+        /* .aboutus{
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          grid-template-rows: 1fr 2fr 1fr;
+          padding-top: 20vw;
+          padding-bottom: 25vw;
+          grid-gap: 0;
+        }
+        .fourth{
+          top: 6vw;
+          width: 37vw;
+          grid-column: 2/3;
+          grid-row: 1/2;
+          align-self: start;
+          justify-self: end;
+          z-index: 5;
+        }
+        .aboutusimg{
+          width: 35vw;
+          height: 50vw;
+          grid-row: 1/2;
+        grid-column: 1/2;
+        z-index: 1;
+        position: absolute;
+        align-self: center;
+        } */
+        button{
+          width: 15vw;
+        }
+        /* .aboutusbtn {
+          justify-self: start;
+          grid-row: 3/4;
+          grid-column: 2/3;
+          align-self: center;
+      } */
+        /* .p4{
+          grid-row: 2/3;
+        grid-column: 1/3;
+        align-self: center;
+        position: relative;
+        justify-self: end;
+        width: 47%;
+        top: 3vw;
+        } */
+        main{
+          margin-bottom: 40vh;
+        }
+
+        footer {
+          display: grid;
+          grid-template-columns: 1.5fr 2fr;
+          grid-template-rows:  auto;
+          height: 40vh;
+          text-align: left;
+          position: fixed;
+          z-index: -10;
+          bottom: 0;
+        align-content: center;
+        }
+        .footer-logo {
+          max-width:15vw;
+          top:0
+        }
+        .line{
+          grid-column: 1/2;
+          grid-row: 1/2;
+          border-left: 1.5px solid #626262;
+          height: 30vh;
+          align-self: center;
+          justify-self: end;
+        }
+        footer.visible {
+          transform: translateY(0);
+        }
+        .contact-info{
+          padding-left: 10vw;
+          height: 100%;
+          display: grid;
+          align-content: center;
+          
+        }
+        .contact-info p{
+          font-size: .8em;
+          font-family: Playfair Display, serif;
+          padding: 0vh 0vh 2vh 0;
+        }
+        h5{
+          font-size: .8em;
+          padding: 0vh 0vh 1vh 0;
+        }
+        footer img{
+          grid-column: 1/2;
+          grid-row: 1/2;
+          justify-self: center;
+        align-self: center;
+
+        }
+        .servicestable{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        .whatwedo, .aboutme, .contact {
+          display: grid;
+          padding: 5vw 10vw 5vw 10vw;
+      }
+      .designed, .mobilefirst, .concepts{
+        display: grid;
+      }
+      .servicesimg{
+        width: 65vw;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        align-self: center;
+      }
+      .whatwedo h2 {
+        width: 60vw;
+        grid-row: 1/2;
+        grid-column: 1/3;
+      }
+      .designedimg, .conceptsimg {
+        width: 40vw;
+        height: 35vw;
+        padding: 0;
+    }
+    .mobilefirstimg {
+      width: 40vw;
+      height: 20vw;
+      padding: 0;
+  }
+    .mobilefirstimg{
+      justify-self: start;
+    }
+    .mobilefirst .p2{
+      top: 80px;
+    }
+    .designed, .mobilefirst, .servicestable {
+      
+  }
+  .designed h2, .mobilefirst h2, .concepts h2{
+    grid-row: 1/2;
+    justify-self: start;
+    align-self: end;
+  }
+  .designed h2, .concepts h2{
+    grid-column: 1/3;
+  }
+  .designedimg, .mobilefirstimg, .whoweareimg, .giannaimg, .conceptsimg{
+    grid-row: 1/3;
+    position: inherit;
+    align-self: center;
+  }
+  
+  .designed, .mobilefirst, .designedimg, .mobilefirstimg, .concepts, .conceptsimg{
+    display: grid;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr 1fr;
+  }
+  .services h2, .table{
+    padding-bottom: 5vw;
+  }
+  .servicestable h2{
+    padding-bottom: 15vw;
+    grid-column: 1/4;
+  }
+  .table{
+    grid-column: 1/4;
+    display: grid;
+    padding: 7vw;
+    text-align: left;
+  }
+  h3 {
+    padding-bottom: 5vw;
+}
+.concept, .dev, .design {
+  padding-bottom: 0;
+}
+.services p, .aboutme p, .contact p {
+  padding-bottom: 2vw;
+}
+.abouthero{
+  width: 58vw;
+  grid-row: 1/2;
+  grid-column: 2/4;
+  align-self: center;
+  position: relative;
+  top: -15vw;
+  left: 3vw;
+}
+.aboutmain h2 {
+  width: 55vw;
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+.whoweareimg, .giannaimg{
+  width: 35vw;
+  height: 40vw;
+  padding: 0;
+}
+.whoweare h2, .whoweare p{
+  grid-column: 1/3;
+  padding-right: 5vw;
+}
+.giannaimg{
+  justify-self: start;
+}
+.whoweareimg{
+  justify-self: end;
+}
+.whoweare h2, .owner h2, .whoweare p, .owner p {
+  padding-bottom: 5vw;
+}
+.owner h2{
+  grid-column:2/3
+}
+.contact{
+  grid-template-columns: 1fr 1fr;
+}
+.info{
+  grid-column: 1/2;
+}
+.form{
+  width: 35vw;
+  grid-column: 2/3;
+  justify-self: end;
+  align-self: center;
+}
+form{
+  padding: 3vw 0;
+}
+input{
+  height: 5vw;
+  float: right;
+  width: 70%;
+  margin-bottom: 3vw;
+}
+.info .contact-info{
+  height: auto;
+  padding: 5vw 0;
+}
+.services h2, .aboutme h2, .contact h2 {
+  padding-bottom: 5vw;
+}
+input[name=message]{
+  height: 15vw;
+}
+input[type=text], input[type=email]{
+  padding-left: 3vw;
+}
+}
+
+    /* IPAD PRO VERTICAL
+    @media only screen 
+    and (min-width: 1024px) 
+    and (max-height: 1366px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+      .hero{
+        height:50vh;
+        background-size: contain;
+      }
+      .intro{
+        height: 50vh;
+      }
+      .company-name{
+        top:7vh;
+      }
+  }
+     */
+  
+  
+  @media only screen and (min-width: 1280px){
+    nav{
+      background-color: none;
+    }
+    .intro{
+      z-index: 50;
+        /* height: calc(var(--vh, 1vh) * 95); */
+
+    }
+    /* .hero{
+      background:  no-repeat top center/100% url("Images/DesktopHero.png");
+      background-size: cover;
+      } */
+      .mobilePreview img{
+        max-width: 23vw;
+      }
+      h1 {
+        height: 11vw;
+        font-size: 6.5vw;
+    }
+    h2{
+      letter-spacing: 0.05em;
+      font-size: 3.8em;
+    }
+        h4 {
+          font-size: 2em;
+      }
+  
+      .project1-desktop, .project2-desktop, .project3-desktop{
+        width: 35vw;
+      }
+      .project1-mobile, .project2-mobile, .project3-mobile {
+        width: 18vw;
+        height: 23vw;
+        position: relative;
+      }
+      .project1-mobile, .project3-mobile {
+        left: 8vw;
+      }
+        .project2-mobile{
+          position: relative;
+          right: 8vw;
+      }
+      .first {
+          /* left: 10vw; */
+      }
+      .first, .third {
+        top: 9vw;
+    }
+      .p1, .p3 {
+        padding-top: 12vw;
+      }
+      .second {
+        /* right: 15vw; */
+    }
+    .third {
+      /* left: 16vw; */
+  }
+    .p2{
+      top: 70px;
+    }
+      .p4{
+        width: 50%;
+      }
+      .aboutusimg {
+        width: 35vw;
+        height: 45vw;
+      }
+    .features {
+      padding: 15vw 12vw 5vw 12vw;
+  }
+  .servicesimg {
+    width: 60vw;
+    grid-column: 1/4;
+    justify-self: end;
+    align-self: end;
+    left: 6vw;
+    top: -2vw;
+    position: relative;
+  }
+  .whatwedo h2 {
+    width: 75vw;
+  }
+  .designedimg, .conceptsimg {
+    width: 36vw;
+  }
+  .mobilefirstimg {
+    justify-self: start;
+    width: 36vw;
+  }
+  .aboutus {
+    padding: 15vw 10vw;
+    grid-gap: 0;
+}
+.abouthero{
+  width: 52vw;
+  top: -15vw;
+  left: 10vw;
+}
+.aboutmain h2 {
+  width: 56vw;
+}
+.whoweareimg, .giannaimg{
+  width: 35vw;
+  height: 35vw;
+  padding: 0;
+}
+form{
+  padding: 3vw 0;
+}
+input{
+  height: 4vw;
+  float: right;
+  width: 70%;
+  margin-bottom: 2vw;
+}
+.info .contact-info{
+  height: auto;
+  padding: 5vw 0;
+}
+.services h2, .aboutme h2, .contact h2 {
+  padding-bottom: 5vw;
+}
+input[name=message]{
+  height: 15vw;
+}
+input[type=text], input[type=email]{
+  padding-left: 2vw;
+}
+  }
+
+
+  @media only screen and (min-width: 1366px) {
+    .mobilePreview {
+      padding-top: 2vw;
+  }
+  button{
+    width: 12vw;
+  }
+  .features {
+    padding: 0vw 12vw 5vw 12vw;
+}
+}
+  
+  @media only screen and (min-width: 1440px) {
+    /* .hero{
+      background:  no-repeat top center/100% url("Images/1440Hero.png");
+      background-size: cover;
+    } */
+    /* .intro {
+      height: calc(90vh - 80px);
+  } */
+  .logo {
+      margin: 0 0 0 7vw;
+  }
+  .nav-list {
+    margin-right: 4vw;
+  }
+    .hero {
+      width: 86vw;
+    }
+    .mobilePreview img {
+      max-width: 20vw;
+  }
+  h1 {
+    font-size: 6.5em;
+  }
+  h2{
+    font-size: 4.3em;
+  }
+  h4 {
+    font-size: 2em;
+    padding-top: 2vw;
+  }
+    .company-name {
+      left:6.8vw;
+    }
+  .aboutus{
+    padding-bottom: 20vw;
+  }
+  .first, .third {
+    top: 10vw;
+}
+  .p1, .p3 {
+    padding-top: 12vw;
+  }
+  p, .p1, .p2, .p3, .p4{
+  font-size: 1.2em;
+  }
+  .contact-info{
+    font-size: 1.25em;
+  }
+  button{
+    font-size: 1em;
+  }
+  .abouthero{
+    width: 48vw;
+    top: -15vw;
+    left: 10vw;
+  }
+  .aboutmain h2 {
+    width: 55vw;
+  }
+  .whoweareimg, .giannaimg{
+    width: 35vw;
+    height: 35vw;
+    padding: 0;
+  }
+  
+}
+@media only screen and (min-width: 1700px){
+h1 {
+    font-size: 7em;
+}
+h4{
+  font-size: 2.2em;
+}
+.nav-list li a {
+  font-size: .9em;
+}
+
+}
+  
+  @media only screen and (min-width: 1920px) {
+    .nav-list li a {
+      font-size: 1.1em;
+  }
+  .intro {
+    height: calc(90vh - 80px);
+  }
+  h1 {
+    height: 8vw;
+}
+h2{
+  font-size: 5.2em;
+}
+  h4 {
+    padding-top: 1vw;
+    top: 7vw;
+    height: 4vw;
+    width: 14vw;
+  }
+  .company-name {
+    top: 15vw;
+}
+.mobilePreview {
+  max-width: 18vw;
+  right: 4vw;
+}
+.project1-desktop, .project2-desktop, .project3-desktop {
+  max-width: 30vw;
+  }
+  .project1-mobile, .project2-mobile, .project3-mobile {
+    max-width: 15vw;
+    height: 23vw;
+    position: relative;
+}
+.project1-mobile, .project3-mobile {
+  left: 12vw;
+}
+.project2-mobile {
+  right: 12vw;
+}
+.features {
+  padding: 0vw 15vw 0vw 15vw;
+}
+/* .fourth{
+  width:30vw
+} */
+/* .aboutus{
+  15vw;
+} */
+.aboutusimg{
+  width: 30vw;
+  height: 40vw;
+}
+.p4{
+  grid-column: 2/3;
+  width: 100%;
+}
+button{
+  width: 10vw;
+}
+.whatwedo, .aboutme, .contact {
+  display: grid;
+  padding: 10vw 12vw 0vw 12vw;
+  height: calc(90vh - 80px);
+}
+.servicesimg {
+  width: 55vw;
+}
+.whatwedo h2 {
+  width: 65vw;
+}
+.abouthero {
+  width: 48vw;
+  top: -15vw;
+  left: 5vw;
+}
+.aboutmain h2 {
+  width: 58vw;
+}
+input{
+  height: 3.5vw;
+  float: right;
+  width: 70%;
+  margin-bottom: 2vw;
+}
+input[name=message]{
+  height: 13vw;
+}
+input[type=text], input[type=email]{
+  padding-left: 1vw;
+}
+  }
+    /* .hero {
+      background: no-repeat center/100% url(Images/1920Hero.png);
+  } */
+  /* p, .p1, .p2, .p3, .p4 {
+    font-size: 1.5em;
+}
+.first, .third {
+  top: 150px;
+}
+.first {
+  left: 170px;
+}
+.third {
+    left: 290px;
+}
+.fourth{
+  left: 120px;
+}
+.second {
+  top: 440px;
+  right: 260px;
+}
+.project1-desktop, .project2-desktop, .project3-desktop {
+  width: 38vw;
+  }
+  .project1-mobile, .project2-mobile, .project3-mobile {
+    width: 19vw;
+    height: 23vw;
+    position: relative;
+}
+.project1-mobile, .project3-mobile {
+  left: 70px;
+}
+.project2-mobile{
+  right: 70px;
+} */
+  
+
+
+/*# sourceMappingURL=style.css.map */
