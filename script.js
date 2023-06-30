@@ -44,7 +44,41 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 }))
 
 
+let formSubmitted = false;
 
+function submitForm(event) {
+  // Check if the form has already been submitted
+  if (formSubmitted) {
+    event.preventDefault();
+    return;
+  }
+
+  event.preventDefault();
+  const form = event.target;
+  const button = document.getElementById('submitButton');
+  const statusMessage = document.getElementById('statusMessage');
+
+  // Disable the button to prevent multiple submissions
+  button.disabled = true;
+  button.innerText = 'Sending...';
+
+  // Perform form submission (you can add your form submission code here)
+  // For demonstration purposes, we'll use a delay to simulate the submission process.
+  setTimeout(function () {
+    // Update button and status message after the form is submitted (simulated here with a delay)
+    button.innerText = 'Message sent';
+    statusMessage.innerText = 'Thank you! Your message has been sent.';
+    formSubmitted = true;
+
+    // Clear the status message and re-enable the button after 3 seconds
+    setTimeout(function () {
+      statusMessage.innerText = '';
+      button.disabled = false;
+      button.innerText = 'SEND';
+      formSubmitted = false;
+    }, 3000); // 3 seconds (adjust this time as needed)
+  }, 2000); // 2 seconds (adjust this time to match the actual submission process)
+}
 
 
 
