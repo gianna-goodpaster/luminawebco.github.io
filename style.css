@@ -33,7 +33,7 @@ h1 {
 
 h2 {
   letter-spacing: 0.1em;
-  font-size: 2em;
+  font-size: 2.1em;
 }
 
 
@@ -95,7 +95,7 @@ body.active {
 
 .nav-list li {
   opacity: 1;
-  margin: 30px 0;
+  margin: 40px 0;
   font-weight: bold;
   font-family: "Lato", sans-serif;
 }
@@ -377,11 +377,11 @@ align-self: center;
     background-size: contain;
 }
 .designed, .mobilefirst, .servicestable, .contact, .concepts{
-  padding: 20vw 10vw 20vw 10vw;
+  padding: 15vw 10vw 20vw 10vw;
 }
-/* .designed{
-  background-color: #FBF5F2;
-} */
+.designed{
+  background-color: #ECE7E0;
+}
 .designedimg,.mobilefirstimg, .conceptsimg{
   padding-top: 10vw;
 }
@@ -402,7 +402,7 @@ align-self: center;
     background-size: contain;
 }
 .concepts{
-  background-color: #ECE7E0;
+  
 }
 .mobilefirst{
   background-color: #FBF5F2;
@@ -811,7 +811,7 @@ button[type=submit] {
         width: 45%;
       }
       .project1-desktop, .project2-desktop, .project3-desktop{
-        width: 40vw;
+        width: 38vw;
         position: absolute;
         grid-row: 1/2;
         z-index: 1;
