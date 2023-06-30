@@ -471,29 +471,13 @@ padding-bottom: 10vw;
   padding-top: 10vw;
 }
 
-
-.submit-button {
-  background-color: #ccc;
-  padding: 10px 20px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-.submit-button.clicked {
-  background-color: green;
-}
-
-.error {
-  color: red;
-}
 form{
   padding: 10vw 0 10vw 0;
   background-color: #F7F3ED;
   display: grid;
   border-radius: 5px;
 }
-input{
+input, textarea{
   width:75%;
   box-shadow: inset 0 0 2px #505050;
   border:none;
@@ -506,12 +490,23 @@ input{
 input[type=text], input[type=email]{
   padding-left: 5vw;
 }
-input[name=message]{
-  height: 30vw;
-}
+
 button[type=submit]{
   color:white;
   margin-left: 8vw;
+}
+textarea{
+  width: 70%;
+   border: none;
+    overflow: auto;
+    resize: none; 
+    box-shadow: inset 0 0 2px #505050;
+    font-family: "Lato", sans-serif;
+  font-size: 1em;
+  line-height: 160%;
+  padding-left:8vw;
+  height: 30vw;
+  padding: 5vw;
 }
 
 /*<----------------@Media---------------->*/
@@ -1079,7 +1074,7 @@ input{
 .services h2, .aboutme h2, .contact h2 {
   padding-bottom: 5vw;
 }
-input[name=message]{
+textarea{
   height: 15vw;
 }
 input[type=text], input[type=email]{
@@ -1230,7 +1225,7 @@ input{
 .services h2, .aboutme h2, .contact h2 {
   padding-bottom: 5vw;
 }
-input[name=message]{
+textarea{
   height: 15vw;
 }
 input[type=text], input[type=email]{
@@ -1415,7 +1410,7 @@ input{
   width: 70%;
   margin-bottom: 2vw;
 }
-input[name=message]{
+textarea{
   height: 13vw;
 }
 input[type=text], input[type=email]{
