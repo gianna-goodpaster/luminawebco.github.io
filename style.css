@@ -441,6 +441,9 @@ h3{
     justify-self: center;
     background-size: contain;
 }
+.whoweare{
+  background-color: transparent;
+}
 .whoweareimg {
   background: no-repeat center/100% url("Images/office.webp");
   width: 100vw;
