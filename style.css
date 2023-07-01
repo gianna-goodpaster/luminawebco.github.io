@@ -507,6 +507,7 @@ textarea{
   padding-left:8vw;
   height: 30vw;
   padding: 5vw;
+  margin-bottom: 3vw;
 }
 
 /*<----------------@Media---------------->*/
@@ -617,6 +618,8 @@ input[type=text], input[type=email] {
 button[type=submit] {
   font-size: 1em;
 }
+textarea {
+  width: 68%;
   }
   
   
@@ -743,7 +746,9 @@ button[type=submit] {
         .abouttxt{
           align-self: center;
         }
-       
+        button[type=submit]{
+          margin-left: 4vw;
+        }
         
   }
   @media only screen and (min-width: 1024px){
@@ -1080,6 +1085,8 @@ textarea{
 input[type=text], input[type=email]{
   padding-left: 3vw;
 }
+textarea {
+    padding: 1.9vw;
 }
 
     /* IPAD PRO VERTICAL
@@ -1227,6 +1234,8 @@ input{
 }
 textarea{
   height: 15vw;
+  padding: 1.3vw;
+  
 }
 input[type=text], input[type=email]{
   padding-left: 2vw;
@@ -1321,6 +1330,9 @@ h4{
 }
 .nav-list li a {
   font-size: .9em;
+}
+textarea{
+  padding: 1vw;
 }
 
 }
