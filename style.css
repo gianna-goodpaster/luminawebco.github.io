@@ -607,7 +607,7 @@ textarea{
       padding: 8vw 10vw 20vw 10vw;
   }
   .designed, .mobilefirst, .servicestable, .contact, .concepts {
-    padding: 10vw 10vw;
+    padding: 5vw 10vw 10vw 10vw;
 }
 input {
   border-radius: 15px;
