@@ -47,14 +47,14 @@
         <div class="form">
           <!-- <form action="https://formsubmit.co/giannagoodpaster@email.com" method="POST"> -->
             <!-- <input type="hidden" name="_subject" value="New Message from Lumina"> -->
-          <form name="contact" method="POST" data-netlify="false" onSubmit="submit"
+          <form name="contact" method="POST" data-netlify="true" onSubmit="submit"
                 data-netlify-honeypot="bot-field" 
           > 
           <input name="bot-field" type="hidden">
             <input type="email" name="email" placeholder="" required>
             <input type="text" name="name" placeholder="" required>
-            <textarea name="message" placeholder="Thank you! Your message has been sent." required>
-            <button type="submit">MESSAGE SENT</button>
+            <textarea name="message" placeholder="Thank you! Your message has been sent." required></textarea>
+            <button type="submit">SENT</button>
         </form>
             </div>
     </main>
