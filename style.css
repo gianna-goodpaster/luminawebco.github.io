@@ -33,7 +33,7 @@ h1 {
 
 h2 {
   letter-spacing: 0.1em;
-  font-size: 2.1em;
+  font-size: 9vw;
 }
 
 
@@ -814,8 +814,10 @@ textarea {
         width: 45%;
       }
       .project1-desktop, .project2-desktop, .project3-desktop{
-        width: 38vw;
+        width: 36vw;
+        height: 44vw;
         position: absolute;
+        align-self: center;
         grid-row: 1/2;
         z-index: 1;
       }
@@ -832,8 +834,8 @@ textarea {
         grid-column: 2/3;
       }
       .project1-mobile, .project2-mobile, .project3-mobile{
-        width: 20vw;
-        height: 25vw;
+        width: 27vw;
+        height: 22vw;
       }
       .project2-mobile{
         grid-column: 1/2;
