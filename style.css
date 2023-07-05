@@ -768,47 +768,46 @@ textarea {
           font-size: 4.2vw;
         }
         .features {
-          padding: 0vw 10vw 5vw 10vw;
+          padding: 12vw 10vw;
+          grid-row-gap: 0;
       }
       .features.left{
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
       }
       .features.right{
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
       }
       .p1, .p3{
         grid-row: 1/2;
         grid-column: 1/2;
         position: relative;
-        align-self: start;
-        padding-top: 10vw;
+        align-self: center;
         width: 45%;
       }
       .p2{
-        grid-row: 2/3;
+        grid-row: 1/2;
         grid-column: 2/3;
         width: 45%;
-        align-self: end;
+        align-self: center;
         position: relative;
         justify-self: end;
-        top: 40px;
       }
       .first{
         /* left: 4.5vw; */
       }
       .first, .third{
         top: 6vw;
-        grid-row: 1/23;
+        grid-row: 1/2;
         grid-column: 1/2;
         align-self: start;
         justify-self: start;
       }
       .second{
-        top: -2vw;
-        grid-column: 2/3;
-        grid-row: 2/3;
+        top: 6vw;
+        grid-column: 1/2;
+        grid-row: 1/2;
         align-self: start;
         justify-self: end;
         width: 45%;
@@ -816,21 +815,15 @@ textarea {
       .project1-desktop, .project2-desktop, .project3-desktop{
         width: 36vw;
         height: 44vw;
-        /* position: absolute; */
         align-self: center;
-        /* float: right; */
-        /* justify-self: end; */
-        grid-row: 2/3;
+        grid-row: 1/2;
         z-index: 1;
       }
       .project1-desktop, .project3-desktop, .designedimg, .conceptsimg{
-        grid-row: 1/2;
         grid-column: 2/3;
       }
       .project2-desktop, .mobilefirstimg{
-        grid-row: 1/2;
         grid-column: 1/2;
-        position: absolute;
       }
       .project1-mobile, .project3-mobile{
         grid-column: 2/3;
@@ -839,9 +832,12 @@ textarea {
       .project1-mobile, .project2-mobile, .project3-mobile{
         width: 27vw;
         height: 22vw;
+        position: relative;
+    top: 8vw;
       }
       .project2-mobile{
         grid-column: 1/2;
+        grid-row: 1/2;
       }
       
         /* .aboutus{
