@@ -337,7 +337,7 @@ footer.visible {
   transform: translateY(0);
 }
 .footer-logo {
-  max-width:30vw;
+  max-width:25vw;
   position: relative;
     top: 10vw;
 }
@@ -352,6 +352,10 @@ h5{
 footer img{
   justify-self: center;
 align-self: center;
+}
+.privacy p, .privacy a{
+  font-size: 8px;
+  color: #93979B;
 }
 
 /*<----------------SUBPAGES STYLING---------------->*/
@@ -902,7 +906,7 @@ textarea {
         align-content: center;
         }
         .footer-logo {
-          max-width:15vw;
+          max-width:12vw;
           top:0
         }
         .line{
@@ -1073,10 +1077,10 @@ form{
   padding: 3vw 0;
 }
 input{
-  height: 5vw;
+  height: 4vw;
   float: right;
   width: 70%;
-  margin-bottom: 3vw;
+  margin-bottom: 2vw;
 }
 .info .contact-info{
   height: auto;
@@ -1086,13 +1090,19 @@ input{
   padding-bottom: 5vw;
 }
 textarea{
-  height: 15vw;
+  height: 12vw;
 }
 input[type=text], input[type=email]{
   padding-left: 3vw;
 }
 textarea {
     padding: 1.9vw;
+}
+.privacy{
+  grid-column: 2/3;
+  align-self: end;
+  justify-self: end;
+  padding-right: 2vw;
 }
 
     /* IPAD PRO VERTICAL
@@ -1129,8 +1139,13 @@ textarea {
       background-size: cover;
       } */
       .mobilePreview img{
-        max-width: 23vw;
+        max-width: 19vw;
+        right: 4vw;
+        top: 2vw;
       }
+      .company-name {
+        top: 13vw;
+    }
       h1 {
         height: 11vw;
         font-size: 6.5vw;
@@ -1165,7 +1180,7 @@ textarea {
         top: 9vw;
     }
       .p1, .p3 {
-        padding-top: 12vw;
+        padding-top: 4vw;
       }
       .second {
         /* right: 15vw; */
@@ -1173,9 +1188,6 @@ textarea {
     .third {
       /* left: 16vw; */
   }
-    .p2{
-      top: 70px;
-    }
       .p4{
         width: 50%;
       }
@@ -1184,7 +1196,7 @@ textarea {
         height: 45vw;
       }
     .features {
-      padding: 15vw 12vw 5vw 12vw;
+      padding: 15vw 12vw;
   }
   .servicesimg {
     width: 60vw;
@@ -1198,12 +1210,15 @@ textarea {
   .whatwedo h2 {
     width: 75vw;
   }
+  .designed, .mobilefirst, .servicestable, .contact, .concepts {
+    padding: 7vw 13vw 10vw 13vw;
+}
   .designedimg, .conceptsimg {
-    width: 36vw;
+    width: 34vw;
   }
   .mobilefirstimg {
     justify-self: start;
-    width: 36vw;
+    width: 34vw;
   }
   .aboutus {
     padding: 15vw 10vw;
@@ -1223,6 +1238,7 @@ textarea {
   padding: 0;
 }
 form{
+  width: 32vw;
   padding: 3vw 0;
 }
 input{
@@ -1239,7 +1255,7 @@ input{
   padding-bottom: 5vw;
 }
 textarea{
-  height: 15vw;
+  height: 10vw;
   padding: 1.3vw;
   
 }
@@ -1257,7 +1273,7 @@ input[type=text], input[type=email]{
     width: 12vw;
   }
   .features {
-    padding: 0vw 12vw 5vw 12vw;
+    padding: 10vw 14vw 14vw 14vw;
 }
 }
   
@@ -1279,13 +1295,14 @@ input[type=text], input[type=email]{
       width: 86vw;
     }
     .mobilePreview img {
-      max-width: 20vw;
+      max-width: 19vw;
+      right: 2vw;
   }
   h1 {
-    font-size: 6.5em;
+    font-size: 6.3em;
   }
   h2{
-    font-size: 4.3em;
+    font-size: 4.2em;
   }
   h4 {
     font-size: 2em;
@@ -1297,12 +1314,15 @@ input[type=text], input[type=email]{
   .aboutus{
     padding-bottom: 20vw;
   }
+  .project1-desktop, .project2-desktop, .project3-desktop {
+    width: 32vw;
+}
+.project1-mobile, .project2-mobile, .project3-mobile {
+  width: 16vw;
+}
   .first, .third {
     top: 10vw;
 }
-  .p1, .p3 {
-    padding-top: 12vw;
-  }
   p, .p1, .p2, .p3, .p4{
   font-size: 1.2em;
   }
@@ -1321,11 +1341,16 @@ input[type=text], input[type=email]{
     width: 55vw;
   }
   .whoweareimg, .giannaimg{
-    width: 35vw;
+    width: 31vw;
     height: 35vw;
     padding: 0;
   }
-  
+  .privacy p, .privacy a{
+    font-size: 9px;
+  }
+  .form {
+    width: 30vw;
+}
 }
 @media only screen and (min-width: 1700px){
 h1 {
@@ -1348,13 +1373,13 @@ textarea{
       font-size: 1.1em;
   }
   .intro {
-    height: calc(90vh - 80px);
+    /* height: calc(98vh - 80px); */
   }
   h1 {
     height: 8vw;
 }
 h2{
-  font-size: 5.2em;
+  font-size: 4vw;
 }
   h4 {
     padding-top: 1vw;
@@ -1366,14 +1391,16 @@ h2{
     top: 15vw;
 }
 .mobilePreview {
-  max-width: 18vw;
+  max-width: 16vw;
   right: 4vw;
+  top: 3.05vw;
 }
 .project1-desktop, .project2-desktop, .project3-desktop {
-  max-width: 30vw;
+  max-width: 26vw;
+  height: 38vw;
   }
   .project1-mobile, .project2-mobile, .project3-mobile {
-    max-width: 15vw;
+    max-width: 12vw;
     height: 23vw;
     position: relative;
 }
@@ -1384,7 +1411,10 @@ h2{
   right: 12vw;
 }
 .features {
-  padding: 0vw 15vw 0vw 15vw;
+  padding: 7vw 17vw 14vw 17vw;
+}
+.footer-logo {
+  max-width: 10vw;
 }
 /* .fourth{
   width:30vw
@@ -1393,7 +1423,7 @@ h2{
   15vw;
 } */
 .aboutusimg{
-  width: 30vw;
+  width: 28vw;
   height: 40vw;
 }
 .p4{
@@ -1422,14 +1452,25 @@ button{
 .aboutmain h2 {
   width: 58vw;
 }
+.designed, .mobilefirst, .servicestable, .contact, .concepts {
+  padding: 7vw 16vw 10vw 16vw;
+}
+.mobilefirstimg, .designedimg, .conceptsimg {
+  width: 30vw;
+}
+.whoweareimg, .giannaimg {
+  width: 26vw;
+  height: 32vw;
+  padding: 0;
+}
+.form {
+  width: 29vw;
+}
 input{
-  height: 3.5vw;
+  height: 2.8vw;
   float: right;
   width: 70%;
-  margin-bottom: 2vw;
-}
-textarea{
-  height: 13vw;
+  margin-bottom: 1.5vw;
 }
 input[type=text], input[type=email]{
   padding-left: 1vw;

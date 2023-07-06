@@ -33,17 +33,16 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
   body.classList.toggle("active");
-  nav.classList.toggle("active");
-  nav.style.backgroundColor = "#B2A799";
+  // nav.classList.toggle("active");
+  // nav.style.backgroundColor = "#B2A799";
 })
 
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
   body.classList.remove("active");
-  nav.classList.remove("active");
+  // nav.classList.remove("active");
 }))
-
 
 
 //Parallax effect for mobile images
